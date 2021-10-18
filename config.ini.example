@@ -1,0 +1,42 @@
+[settings]
+; whether you want to see selenium do its work or not
+headless = true
+; deprecated var, never really used anyways
+debug = false
+; this must correspond with a section you define below that contains:
+;   name, scraper, username, password, and entry_url
+vendor = utility_company
+
+[caching]
+; whather or not you want to cache your data, makes processing back-to-back way faster
+enabled = true
+; path, relative to the root of the project, where the cache will be stored
+cache_path = cache
+; file nomenclature, using strftime format. percent signs must be double escaped.
+format = %%Y-%%m-%%d.json
+
+[discord]
+; bot name (will override whatever's set in server)
+bot_name = Utility Bot
+; bot profile pic url (will override whatever's set in server)
+bot_pfp = https://via.placeholder.com/50
+; discord webhook url to send the message to
+post_url = https://discord.com/api/webhooks/.../
+; the id of the role to ping inside the update message
+ping_id = 1234567890123456
+
+;
+; -=- Example Service Provider Definition -=-
+;
+
+[utility_company]
+; name of service
+name = City Utilities
+; name of scraper module you'd wish to use
+scraper = ExampleScraper
+; the main entrypoint for the utility server
+entry_url = https://example.utilities.com/login.aspx
+; The username to use for the connection
+username = username
+; The password to use for the connection
+password = password
