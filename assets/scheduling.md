@@ -58,7 +58,7 @@ You'll also need to come up with an ID for this service. Usually it's a somein y
 
 Create a plist file using that ID as the name in `/Library/LaunchDaemons` and make it have the following:
 
-```plist
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
